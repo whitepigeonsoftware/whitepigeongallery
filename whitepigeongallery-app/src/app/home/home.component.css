@@ -12,57 +12,84 @@ ul {
   padding: 0 0 0 8px;
 }
 
+.flex-container {
+  padding: 0;
+  margin: 0;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.flex-item {
+  padding: 5px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+.flex-header-outer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+
+.flex-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-header-small {
+  padding-right: 15px;
+  font-size: medium;
+  color: dimgray;
+}
+
+a {
+  color: dimgray;
+  text-decoration: none;
+}
+
+.header {
+  font-size: 4vw;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.header-gray {
+  font-size: 4vw;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: dimgray;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)  {
-  .flex-header-outer {
-    display: flex;
-    flex-direction: row;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    padding-left: 10px;
-  }
-
-  .flex-header {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flex-header-small {
-    padding-right: 15px;
-    font-size: medium;
-    color: dimgray;
-  }
-
-  a {
-    color: dimgray;
-    text-decoration: none;
-  }
-
-  .header {
-    font-size: 4vw;
-    letter-spacing: -0.03em;
-    line-height: 1;
-  }
-
-  .header-gray {
-    font-size: 4vw;
-    letter-spacing: -0.03em;
-    line-height: 1;
-    color: dimgray;
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .instaimage {
+    height: 350px
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .parent{
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 501px) {
-  .parent {
-    display: flex;
-    flex-direction: row;
+@media screen and (max-width: 480px) {
+  .instaimage{
+    height: 320px;
   }
 }

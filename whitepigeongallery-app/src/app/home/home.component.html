@@ -15,12 +15,12 @@
   </div>
 </div>
 
-<div class="container">
+<div class="flex-container">
   <div *ngFor="let feedItem of feed">
-    <div class="item">
+    <div class="flex-item">
       <div class="parent">
         <div class="child">
-          <img src="{{ feedItem.image_versions2.candidates[0].url }}" height="350px"/>
+          <img src="{{ feedItem.image_versions2.candidates[0].url }}" class="instaimage"/>
         </div>
         <div class="child">
           {{ feedItem.caption.text | uppercase }}
