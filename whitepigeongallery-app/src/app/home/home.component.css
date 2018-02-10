@@ -23,7 +23,6 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  overflow: hidden;
 }
 
 .flex-item {
@@ -31,7 +30,6 @@ ul {
   margin-top: 10px;
   width: 100%;
   color: white;
-  overflow: hidden;
 }
 
 .flex-header-outer {
@@ -73,24 +71,63 @@ a {
 
 .parent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
   flex-wrap: wrap;
-  overflow: hidden;
+}
+
+.child {
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.small {
+  display: none;
+}
+
+.instaimage {
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
+  .big {
+    display: none;
+  }
+
   .instaimage {
-    width: 350px
+    height: auto;
+    width: auto;
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  .small {
+    display: flex;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .instaimage{
-    width: 320px;
+  .big {
+    display: none;
+  }
+
+  .instaimage {
+    height: auto;
+    width: auto;
+    max-width: 320px;
+    max-height: 320px;
+  }
+
+  .small {
+    display: flex;
   }
 }

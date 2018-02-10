@@ -20,7 +20,12 @@
     <div class="flex-item">
       <div class="parent">
         <div class="child">
-          <img src="{{ feedItem.image_versions2.candidates[0].url }}" class="instaimage"/>
+          <div class="big">
+            <img src="{{ feedItem.image_versions2.candidates[0].url }}" class="instaimage"/>
+          </div>
+          <div class="small">
+            <img src="{{ feedItem.image_versions2.candidates[0].url }}" class="instaimage"/>
+          </div>
         </div>
         <div class="child">
           {{ feedItem.caption.text | uppercase }}
