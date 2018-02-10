@@ -1,0 +1,31 @@
+<div class="flex-header-outer">
+  <div class="flex-header">
+    <div class="header item">{{ instagramUser.full_name | uppercase }}</div>
+    <div class="header-gray item">{{ instagramUser.biography | uppercase }}</div>
+  </div>
+  <div class="flex-header-small">
+    <a href="mailto:">
+      EMAIL
+    </a>
+  </div>
+  <div class="flex-header-small">
+    <a href="http://www.instagram.com/{{ instagramUser.username }}">
+      INSTAGRAM
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <div *ngFor="let feedItem of feed">
+    <div class="item">
+      <div class="parent">
+        <div class="child">
+          <img src="{{ feedItem.image_versions2.candidates[0].url }}" height="350px"/>
+        </div>
+        <div class="child">
+          {{ feedItem.caption.text | uppercase }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

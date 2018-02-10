@@ -1,18 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { BrowserModule } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, HomeModule, SharedModule.forRoot()],
+  declarations: [AppComponent],
+  providers: [{
+    provide: APP_BASE_HREF,
+    useValue: ''
+  }],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
