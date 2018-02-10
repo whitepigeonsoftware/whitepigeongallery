@@ -84,12 +84,12 @@ a {
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
   .instaimage {
-    height: 350px
+    width: 350px
   }
 }
 
 @media screen and (max-width: 480px) {
   .instaimage{
-    height: 320px;
+    width: 320px;
   }
 }
