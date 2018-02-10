@@ -78,6 +78,7 @@ a {
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 @media only screen
